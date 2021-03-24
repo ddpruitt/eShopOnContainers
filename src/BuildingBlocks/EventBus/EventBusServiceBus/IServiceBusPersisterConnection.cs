@@ -1,12 +1,11 @@
 ﻿namespace Microsoft.eShopOnContainers.BuildingBlocks.EventBusServiceBus
 {
-    using System;
     using Microsoft.Azure.ServiceBus;
+    using System;
 
     public interface IServiceBusPersisterConnection : IDisposable
     {
-        ServiceBusConnectionStringBuilder ServiceBusConnectionStringBuilder { get; }
-
-        ITopicClient CreateModel();
+        ITopicClient TopicClient { get; }
+        ISubscriptionClient SubscriptionClient { get; }
     }
 }

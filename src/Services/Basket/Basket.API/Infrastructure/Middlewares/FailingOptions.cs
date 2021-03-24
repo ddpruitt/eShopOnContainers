@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Basket.API.Infrastructure.Middlewares
 {
@@ -9,5 +6,7 @@ namespace Basket.API.Infrastructure.Middlewares
     {
         public string ConfigPath = "/Failing";
         public List<string> EndpointPaths { get; set; } = new List<string>();
+
+        public List<string> NotFilteredPaths { get; set; } = new List<string>();
     }
 }
